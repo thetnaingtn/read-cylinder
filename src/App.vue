@@ -13,13 +13,19 @@
         </div>
       </div>
     </el-card>
-    <span style="line-height: 0.4">ဖိအား</span>
-    <el-select v-model="psiValue" placeholder="Select PSI">
+    <label style="line-height: 0.4; cursor: pointer" for="psi">ဖိအား</label>
+    <el-select v-model="psiValue" id="psi" placeholder="Select PSI">
       <el-option v-for="psi in psis" :key="psi" :label="psi" :value="psi">
       </el-option>
     </el-select>
-    <span style="line-height: 0.4">အိုးအရွယ်အစား</span>
-    <el-select v-model="literValue" placeholder="Select Cylinder Size(L)">
+    <label style="line-height: 0.4; cursor: pointer" for="cylinder"
+      >အိုးအရွယ်အစား</label
+    >
+    <el-select
+      v-model="literValue"
+      id="cylinder"
+      placeholder="Select Cylinder Size(L)"
+    >
       <el-option
         v-for="liter in liters"
         :key="liter"
@@ -27,8 +33,14 @@
         :value="liter"
       />
     </el-select>
-    <span style="line-height: 0.2">လူနာကိုပေးနေရသောပမာဏ</span>
-    <el-select v-model="flowValue" placeholder="Select Flow Rate(L/min)">
+    <label style="line-height: 0.2; cursor: pointer" for="rate"
+      >လူနာကိုပေးနေရသောပမာဏ</label
+    >
+    <el-select
+      v-model="flowValue"
+      id="rate"
+      placeholder="Select Flow Rate(L/min)"
+    >
       <el-option
         v-for="flowRate in flowRates"
         :key="flowRate"
